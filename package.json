@@ -18,7 +18,6 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "dev": "npm run build && node bin/example-command.js",
     "lint": "run-s -c lint:*",
     "lint:tsc": "tsc",
     "lint:eslint": "eslint .",
@@ -50,9 +49,6 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "bin": {
-    "example-command": "bin/example-command.js"
-  },
   "keywords": [],
   "files": [
     "bin",
@@ -60,5 +56,8 @@
     "!src/**/*.test.ts",
     "!src/**/__snapshots__",
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "dedent": "^1.3.0"
+  }
 }
